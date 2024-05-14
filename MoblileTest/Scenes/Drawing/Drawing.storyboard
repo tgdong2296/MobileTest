@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drawing View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DrawingViewController" id="Y6W-OH-hqX" customClass="DrawingViewController" customModule="MoblileTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCn-RL-Z2y" customClass="DrawableView" customModule="MoblileTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duF-gX-lg0">
+                                <rect key="frame" x="16" y="75" width="67" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Close"/>
+                                <connections>
+                                    <action selector="handleCloseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YbR-HI-yYy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fol-mD-nbH">
+                                <rect key="frame" x="316" y="75" width="61" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Save"/>
+                                <connections>
+                                    <action selector="handleSaveButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0nv-P4-zqA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XG-dA-Vrb">
+                                <rect key="frame" x="15.999999999999996" y="762" width="63.666666666666657" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Qre-nO-4ow"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-8" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Undo" image="arrow.uturn.backward.circle" catalog="system">
+                                    <color key="titleColor" systemColor="tintColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleUndoButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SGN-Nv-X82"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ni-kA-xkB">
+                                <rect key="frame" x="95.666666666666671" y="760" width="56.000000000000014" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sticker"/>
+                                <connections>
+                                    <action selector="handleStickerButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1XX-mC-K0P"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ggV-wz-DKk">
+                                <rect key="frame" x="270" y="763" width="107" height="32"/>
+                                <segments>
+                                    <segment title="Draw"/>
+                                    <segment title="Erase"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="handleSwitchButton:" destination="Y6W-OH-hqX" eventType="valueChanged" id="ocz-2p-Vfd"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fol-mD-nbH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="5iH-6B-ejU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8XG-dA-Vrb" secondAttribute="bottom" constant="24" id="LUD-ga-x8a"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ggV-wz-DKk" secondAttribute="trailing" constant="16" id="LmS-yT-33w"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7ni-kA-xkB" secondAttribute="bottom" constant="24" id="O5d-IW-dxF"/>
+                            <constraint firstItem="duF-gX-lg0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="QbP-t7-NDd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ggV-wz-DKk" secondAttribute="bottom" constant="24" id="TNL-gO-rYg"/>
+                            <constraint firstItem="sCn-RL-Z2y" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="WJx-x3-use"/>
+                            <constraint firstItem="sCn-RL-Z2y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Xej-wy-PXJ"/>
+                            <constraint firstItem="7ni-kA-xkB" firstAttribute="leading" secondItem="8XG-dA-Vrb" secondAttribute="trailing" constant="16" id="Ysf-lU-mPg"/>
+                            <constraint firstItem="duF-gX-lg0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="faO-Jc-mtv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fol-mD-nbH" secondAttribute="trailing" constant="16" id="gH9-Ri-Moe"/>
+                            <constraint firstItem="sCn-RL-Z2y" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="hSy-Qn-abP"/>
+                            <constraint firstItem="8XG-dA-Vrb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ndd-UC-MDO"/>
+                            <constraint firstItem="sCn-RL-Z2y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ych-s6-vj6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawingView" destination="sCn-RL-Z2y" id="aIW-76-SUf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.58778625954199" y="18.30985915492958"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.uturn.backward.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
