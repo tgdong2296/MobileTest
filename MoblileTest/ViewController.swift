@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func handleAnimationButton(_ sender: UIButton) {
+        let viewController = AnimationViewController.instantiate()
+        viewController.modalPresentationStyle = .overFullScreen
+        navigationController?.present(viewController, animated: true)
     }
 
 }

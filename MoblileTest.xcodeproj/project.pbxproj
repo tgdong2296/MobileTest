@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E2A25C22BF4FB0C00AE8F61 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A25C12BF4FB0C00AE8F61 /* AnimationViewController.swift */; };
+		9E2A25C42BF4FB3400AE8F61 /* Animation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2A25C32BF4FB3400AE8F61 /* Animation.storyboard */; };
+		9E2A25C62BF5085900AE8F61 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A25C52BF5085900AE8F61 /* UIView+.swift */; };
+		9E2A25C82BF5156100AE8F61 /* AnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A25C72BF5156100AE8F61 /* AnimationDelegate.swift */; };
 		9E62761D2BF3AC4E000C7CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62761C2BF3AC4E000C7CC3 /* AppDelegate.swift */; };
 		9E62761F2BF3AC4E000C7CC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62761E2BF3AC4E000C7CC3 /* SceneDelegate.swift */; };
 		9E6276212BF3AC4E000C7CC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6276202BF3AC4E000C7CC3 /* ViewController.swift */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E2A25C12BF4FB0C00AE8F61 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		9E2A25C32BF4FB3400AE8F61 /* Animation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Animation.storyboard; sourceTree = "<group>"; };
+		9E2A25C52BF5085900AE8F61 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		9E2A25C72BF5156100AE8F61 /* AnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDelegate.swift; sourceTree = "<group>"; };
 		9E6276192BF3AC4E000C7CC3 /* MoblileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoblileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E62761C2BF3AC4E000C7CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E62761E2BF3AC4E000C7CC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +61,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E2A25C02BF4FAFB00AE8F61 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				9E2A25C52BF5085900AE8F61 /* UIView+.swift */,
+				9E2A25C72BF5156100AE8F61 /* AnimationDelegate.swift */,
+				9E2A25C32BF4FB3400AE8F61 /* Animation.storyboard */,
+				9E2A25C12BF4FB0C00AE8F61 /* AnimationViewController.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		9E6276102BF3AC4E000C7CC3 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +106,7 @@
 		9E6276332BF3ADDD000C7CC3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9E2A25C02BF4FAFB00AE8F61 /* Animation */,
 				9E6276342BF3ADE6000C7CC3 /* Drawing */,
 			);
 			path = Scenes;
@@ -190,6 +210,7 @@
 				9E62763D2BF3AFAE000C7CC3 /* DrawableView.xib in Resources */,
 				9E6276292BF3AC4F000C7CC3 /* LaunchScreen.storyboard in Resources */,
 				9E6276382BF3AE03000C7CC3 /* Drawing.storyboard in Resources */,
+				9E2A25C42BF4FB3400AE8F61 /* Animation.storyboard in Resources */,
 				9E6276262BF3AC4F000C7CC3 /* Assets.xcassets in Resources */,
 				9E6276242BF3AC4E000C7CC3 /* Main.storyboard in Resources */,
 			);
@@ -205,10 +226,13 @@
 				9E6276212BF3AC4E000C7CC3 /* ViewController.swift in Sources */,
 				9E6276362BF3ADF7000C7CC3 /* DrawingViewController.swift in Sources */,
 				9E6276402BF3B6A6000C7CC3 /* Stack.swift in Sources */,
+				9E2A25C82BF5156100AE8F61 /* AnimationDelegate.swift in Sources */,
 				9E62763C2BF3AFAE000C7CC3 /* DrawableView.swift in Sources */,
 				9EA8E8F12BF3CC210095F7E8 /* StickerView.swift in Sources */,
 				9E62761D2BF3AC4E000C7CC3 /* AppDelegate.swift in Sources */,
+				9E2A25C62BF5085900AE8F61 /* UIView+.swift in Sources */,
 				9E62761F2BF3AC4E000C7CC3 /* SceneDelegate.swift in Sources */,
+				9E2A25C22BF4FB0C00AE8F61 /* AnimationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
